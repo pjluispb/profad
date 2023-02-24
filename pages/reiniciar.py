@@ -7,7 +7,7 @@ pd.set_option('display.max_colwidth', None)
 deta = Deta(st.secrets["deta_key"])
 
 clave = st.session_state['clave']
-#st.write(clave)
+st.write(clave)
 
 usuarios = deta.Base('usuarios')
 rec1=usuarios.get(clave)
