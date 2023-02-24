@@ -1,0 +1,2 @@
+# requirements.txt
+deta==x.x.x
