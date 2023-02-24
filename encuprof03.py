@@ -190,3 +190,7 @@ with st.form(key='miform'):
 
         db_content = encprof.fetch().items
         st.write(db_content)
+        
+volver = st.button('Volver')
+if volver:
+    switch_page('reiniciar')
