@@ -12,7 +12,7 @@ usuarios = deta.Base('usuarios')
 rec1=usuarios.get(clave)
 
 st.write(rec1)
-sdf = pd.Series(rec1[0])
+sdf = pd.Series(rec1)
 sdf
 
 volver = st.button('Volver')
