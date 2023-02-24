@@ -191,6 +191,8 @@ with st.form(key='miform'):
         db_content = encprof.fetch().items
         regdb = encprof.fetch({"nombre?contains": nombre}).items
         st.write(regdb)
+        sdf = pd.Series(registro)
+        st.write(sdf)
         
 volver = st.button('Volver')
 if volver:
