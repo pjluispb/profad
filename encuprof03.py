@@ -194,5 +194,5 @@ with st.form(key='miform'):
         
 volver = st.button('Volver')
 if volver:
-    st.experimental_rerun()
+    #st.experimental_rerun()
     switch_page('reiniciar')
