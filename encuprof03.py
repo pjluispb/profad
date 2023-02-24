@@ -194,7 +194,7 @@ with st.form(key='miform'):
         #sdf = pd.Series(registro)
         sdf = pd.Series(regdb[0])
         st.write(sdf)
-        clave = regdb['key']
+        clave = regdb[0]['key']
         session_state['clave'] = clave
         
         
