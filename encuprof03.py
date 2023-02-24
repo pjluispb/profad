@@ -4,6 +4,14 @@ from deta import Deta
 import pandas as pd
 import datetime
 
+st.set_page_config(
+    page_title="Profesionales AD Reg App",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+
+)
+
 deta = Deta(st.secrets["deta_key"])
 encprof = deta.Base('usuarios')
 #db_content = encprof.fetch().items
