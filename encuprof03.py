@@ -195,7 +195,7 @@ with st.form(key='miform'):
         sdf = pd.Series(regdb[0])
         st.write(sdf)
         clave = regdb[0]['key']
-        session_state['clave'] = clave
+        st.session_state['clave'] = clave
         
         
 volver = st.button('Volver')
