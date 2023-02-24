@@ -191,8 +191,12 @@ with st.form(key='miform'):
         db_content = encprof.fetch().items
         regdb = encprof.fetch({"nombre?contains": nombre}).items
         st.write(regdb)
-        sdf = pd.Series(registro)
+        #sdf = pd.Series(registro)
+        sdf = pd.Series(regdb)
         st.write(sdf)
+        clave = regdb['key']
+        session_state['clave'] = clave
+        
         
 volver = st.button('Volver')
 if volver:
