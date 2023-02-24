@@ -1,2 +1,2 @@
 # requirements.txt
-deta==x.x.x
+deta==1.1.0
