@@ -22,7 +22,7 @@ st.header('Encuesta de Profesionales y Tecnicos de las Asambleas de Dios 2023')
 
 with st.form(key='miform'):
     with st.expander('Datos Personales'):
-        nombre = st.text_input('Nombre Completo')
+        nombre = st.text_input('Nombre Completo ---- Obligatorio')
         tlf1 = st.text_input('Nro de telefono')
         celular = st.text_input('Nro de celular')
         email = st.text_input('Correo electronico principal')
@@ -189,7 +189,8 @@ with st.form(key='miform'):
 
 
         db_content = encprof.fetch().items
-        st.write(db_content)
+        regdb = encprof.fetch({"nombre?contains": nombre})
+        st.write(regdb)
         
 volver = st.button('Volver')
 if volver:
