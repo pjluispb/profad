@@ -11,7 +11,7 @@ st.write(clave)
 usuarios = deta.Base('usuarios')
 rec1=usuarios.get(clave)
 
-st.write(recl)
+st.write(rec1)
 
 volver = st.button('Volver')
 if volver:
