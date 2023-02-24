@@ -192,7 +192,7 @@ with st.form(key='miform'):
         regdb = encprof.fetch({"nombre?contains": nombre}).items
         st.write(regdb)
         #sdf = pd.Series(registro)
-        sdf = pd.Series(regdb)
+        sdf = pd.Series(regdb[0])
         st.write(sdf)
         clave = regdb['key']
         session_state['clave'] = clave
