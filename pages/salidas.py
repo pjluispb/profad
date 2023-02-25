@@ -7,8 +7,14 @@ pd.set_option('display.max_colwidth', None)
 
 deta = Deta(st.secrets["deta_key"])
 
-clave = st.session_state['clave']
+#clave = st.session_state['clave']
 #st.write('clave = ',clave)
+try:
+    clave = st.session_state['clave']
+except:
+    st.error('Error en la conexion')
+    st.warning('Error en la conexion. Volviendo a pagina de inicio')
+    switch_page('encuprof05')
 
 usuarios = deta.Base('usuarios')
 rec1=usuarios.get(clave)
