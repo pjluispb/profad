@@ -14,7 +14,7 @@ try:
 except:
     st.error('Error en la conexion')
     st.warning('Error en la conexion. Volviendo a pagina de inicio')
-    switch_page('encuprof05')
+    switch_page('encuprof03')
 
 usuarios = deta.Base('usuarios')
 rec1=usuarios.get(clave)
