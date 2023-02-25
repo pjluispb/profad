@@ -18,7 +18,11 @@ encprof = deta.Base('usuarios')
 #st.write(db_content)
 
 
-st.header('Encuesta de Profesionales y Tecnicos de las Asambleas de Dios 2023')
+#st.header('Encuesta de Profesionales y Tecnicos de las Asambleas de Dios 2023')
+st.header('Encuesta de Liderazgo Eclesial de las Asambleas de Dios 2023')
+st.subheader('Distrito Andino - Zona 1')
+st.write('Elaborado por APTA - Dtto Andino')
+st.text('Ficha de Registro')
 
 with st.form(key='miform'):
     with st.expander('Datos Personales'):
@@ -196,9 +200,10 @@ with st.form(key='miform'):
         st.write(sdf)
         clave = regdb[0]['key']
         st.session_state['clave'] = clave
-        
+        switch_page('salidas')
         
 volver = st.button('Volver')
 if volver:
+    switch_page('salidas')
     #st.experimental_rerun()
-    switch_page('reiniciar')
+    #switch_page('reiniciar')
