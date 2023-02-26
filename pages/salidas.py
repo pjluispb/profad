@@ -220,7 +220,7 @@ col9, col10, col11 = st.columns(3)
 with col9:
     continuar = st.button('Continuar')
     if continuar:
-        switch_page('encuprof05')
+        switch_page('encuprof03')
 with col10:
     editar = st.button('Editar')
     if editar:
