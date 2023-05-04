@@ -147,7 +147,7 @@ for t in trip:
             'stack': 'a',
             'emphasis': { 'focus': 'series'    }  }
             ],
-        'legend': {'show': 'true', 'data': ['A', 'B', 'C'] }
+        'legend': {'show': 'true', 'data': ['Auto', 'Cercano', 'Lejano'] }
         }
     st.write('---')
     st_echarts(options=option02, height="500px")
