@@ -22,7 +22,7 @@ sh = gc.open('DonesTest')
 wks = sh.worksheet_by_title('preguntas')
 df = pd.DataFrame(wks)
 df.drop(index=2,)
-st.write(df)
+#st.write(df)
 regdf = df.to_dict('records')
 #st.write('regdf = ', regdf)
 evalus = [['Pedro','Maria'],['Jose', 'Sonia'],['Jaime','Carmen'],['Carlos','Sobeida'],['Emilio','Graciela'],['Ensi','Marce'],['Victor','Flor'],['Gilbert','Rosa']]
@@ -44,19 +44,15 @@ for t in trip:
     st.write(t[0])
     tval=[]
     for elem in t:
-        st.write('==>',elem,'<==')
+        #st.write('==>',elem,'<==')
         lidonpre, dones = [], []
         for reg in regdf:
             donb = reg[0]
             pregunta = reg[1]
             lidonpre.append((donb,pregunta))
             dones.append(donb)
-        #st.write('dones = ', dones)
         random_lip = random.sample(lidonpre,k=len(lidonpre))
-        #print(random_lip)
         solodones = set(dones)
-        #print(len(solodones),solodones)
-        #st.write(len(solodones),solodones)
         lres = []
         for t in random_lip:
             don = t[0]
@@ -64,21 +60,14 @@ for t in trip:
             sel = random.randint(1,4)*5
             tup=[don,preg,sel]
             lres.append(tup)
-        # for dpre in lres:
-        #     print(dpre)
-        # print('Dones = ', solodones)
         resuldon, resultados = [], []
         for donesp in solodones:
             resXdon = [r[2] for r in lres if r[0]==donesp]
             suma=0
             for num in resXdon:
                 suma+=num
-            #print(donesp,resXdon,'=',suma)
-            #print(donesp, suma)
             resuldon.append((donesp,suma))
             resultados.append(suma)
-        #print(resuldon)
-        #st.write(resultados)
         tval.append(resultados)
     #st.write(tval)
     options01 = {
@@ -123,7 +112,7 @@ for t in trip:
             
         ],
     }
-    st_echarts(options=options01, height="500px")
+    #  ---   st_echarts(options=options01, height="500px")
     option02 = {
         "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}},
         "legend": {
