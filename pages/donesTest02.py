@@ -24,7 +24,7 @@ df = pd.DataFrame(wks)
 df.drop(index=2,)
 st.write(df)
 regdf = df.to_dict()
-#st.write(regdf)
+st.write(regdf)
 evalus = [['Pedro','Maria'],['Jose', 'Sonia'],['Jaime','Carmen'],['Carlos','Sobeida'],['Emilio','Graciela'],['Ensi','Marce'],['Victor','Flor'],['Gilbert','Rosa']]
 evalus2 = [[x[1],x[0]] for x in evalus]
 evalus3 = evalus+evalus2
