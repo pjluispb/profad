@@ -51,9 +51,10 @@ for t in trip:
     tval=[]
     for elem in t:
         #print('==>',elem,'<==')
-        #st.write('==>',elem,'<==')
+        st.write('==>',elem,'<==')
         lidonpre, dones = [], []
         for reg in regdf:
+            st.write(reg)
             donb = reg[0]
             pregunta = reg[1]
             #print(donb,'< - >',pregunta)
