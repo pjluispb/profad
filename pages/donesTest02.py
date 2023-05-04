@@ -21,9 +21,9 @@ gc =pygsheets.authorize(custom_credentials=my_credentials)
 sh = gc.open('DonesTest')
 wks = sh.worksheet_by_title('preguntas')
 df = pd.DataFrame(wks)
-#df.drop(index=2,)
+df.drop(index=2,)
 #st.write(df)
-regdf = df.to_dict('regp')
+regdf = df.to_dict()
 #st.write(regdf)
 evalus = [['Pedro','Maria'],['Jose', 'Sonia'],['Jaime','Carmen'],['Carlos','Sobeida'],['Emilio','Graciela'],['Ensi','Marce'],['Victor','Flor'],['Gilbert','Rosa']]
 evalus2 = [[x[1],x[0]] for x in evalus]
