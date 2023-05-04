@@ -116,7 +116,7 @@ for t in trip:
     option02 = {
         "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}},
         "legend": {
-            "data": ["Direct", "Mail Ad", "Affiliate Ad"]
+            "data": ['Auto', 'Cercano', 'Lejano']
         },
         'angleAxis': {
             'type': 'category',
