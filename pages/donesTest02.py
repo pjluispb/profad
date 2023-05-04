@@ -24,7 +24,7 @@ df = pd.DataFrame(wks)
 df.drop(index=2,)
 st.write(df)
 regdf = df.to_dict('records')
-st.write('regdf = ', regdf)
+#st.write('regdf = ', regdf)
 evalus = [['Pedro','Maria'],['Jose', 'Sonia'],['Jaime','Carmen'],['Carlos','Sobeida'],['Emilio','Graciela'],['Ensi','Marce'],['Victor','Flor'],['Gilbert','Rosa']]
 evalus2 = [[x[1],x[0]] for x in evalus]
 evalus3 = evalus+evalus2
@@ -46,12 +46,11 @@ for t in trip:
         st.write('==>',elem,'<==')
         lidonpre, dones = [], []
         for reg in regdf:
-            #st.write(reg)
             donb = reg[0]
             pregunta = reg[1]
             lidonpre.append((donb,pregunta))
             dones.append(donb)
-        st.write('dones = ', dones)
+        #st.write('dones = ', dones)
         random_lip = random.sample(lidonpre,k=len(lidonpre))
         #print(random_lip)
         solodones = set(dones)
