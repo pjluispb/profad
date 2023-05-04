@@ -41,6 +41,7 @@ for t in evalus3:
     etri = [t[0], t[1], third]
     trip.append(etri)
 for t in trip:
+    st.write(t[0])
     tval=[]
     for elem in t:
         st.write('==>',elem,'<==')
