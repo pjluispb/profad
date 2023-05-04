@@ -50,11 +50,10 @@ for t in trip:
         lidonpre, dones = [], []
         for reg in regdf:
             st.write(reg)
-            donb = reg[0]
-            pregunta = reg[1]
-            #print(donb,'< - >',pregunta)
-            lidonpre.append((donb,pregunta))
-            dones.append(donb)
+            # -- donb = reg[0]
+            # -- pregunta = reg[1]
+            # -- lidonpre.append((donb,pregunta))
+            # -- dones.append(donb)
         #st.write('dones = ', dones)
         random_lip = random.sample(lidonpre,k=len(lidonpre))
         #print(random_lip)
