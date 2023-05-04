@@ -24,14 +24,11 @@ df = pd.DataFrame(wks)
 df.drop(index=2,)
 st.write(df)
 regdf = df.to_dict()
-st.write(regdf)
+st.write('regdf = ', regdf)
 evalus = [['Pedro','Maria'],['Jose', 'Sonia'],['Jaime','Carmen'],['Carlos','Sobeida'],['Emilio','Graciela'],['Ensi','Marce'],['Victor','Flor'],['Gilbert','Rosa']]
 evalus2 = [[x[1],x[0]] for x in evalus]
 evalus3 = evalus+evalus2
-#print(evalus3)
 #st.write(evalus3)
-# for t in evalus3:
-#     print(t)
 pers1 = [x[0] for x in evalus3]
 pers2 = [x[1] for x in evalus3]
 pers3 = pers1+pers2
@@ -44,10 +41,8 @@ for t in evalus3:
     etri = [t[0], t[1], third]
     trip.append(etri)
 for t in trip:
-    #print('\n','-----------','\n',t)
-    #print('regdf = ',regdf)
     # Número 1 = no mucho o nada; Número 2 = un poquito; Número 3 = algo; Número 4 = mucho
-    st.write(t[0])
+    #st.write(t[0])
     tval=[]
     for elem in t:
         #print('==>',elem,'<==')
