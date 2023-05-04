@@ -48,7 +48,7 @@ for t in trip:
         #print('==>',elem,'<==')
         st.write('==>',elem,'<==')
         lidonpre, dones = [], []
-        st.write(regdf)
+        #st.write(regdf)
         for reg in regdf:
             st.write(reg)
             # -- donb = reg[0]
