@@ -22,7 +22,7 @@ sh = gc.open('DonesTest')
 wks = sh.worksheet_by_title('preguntas')
 df = pd.DataFrame(wks)
 df.drop(index=2,)
-#st.write(df)
+st.write(df)
 regdf = df.to_dict()
 st.write(regdf)
 evalus = [['Pedro','Maria'],['Jose', 'Sonia'],['Jaime','Carmen'],['Carlos','Sobeida'],['Emilio','Graciela'],['Ensi','Marce'],['Victor','Flor'],['Gilbert','Rosa']]
