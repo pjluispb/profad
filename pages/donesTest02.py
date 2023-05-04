@@ -46,12 +46,12 @@ for t in trip:
         st.write('==>',elem,'<==')
         lidonpre, dones = [], []
         for reg in regdf:
-            st.write(reg)
-            # -- donb = reg[0]
-            # -- pregunta = reg[1]
-            # -- lidonpre.append((donb,pregunta))
-            # -- dones.append(donb)
-        #st.write('dones = ', dones)
+            #st.write(reg)
+            donb = reg[0]
+            pregunta = reg[1]
+            lidonpre.append((donb,pregunta))
+            dones.append(donb)
+        st.write('dones = ', dones)
         random_lip = random.sample(lidonpre,k=len(lidonpre))
         #print(random_lip)
         solodones = set(dones)
