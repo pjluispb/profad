@@ -55,7 +55,7 @@ else:
     st.stop()
 with st.empty():
     for seconds in range(1):
-        st.write(f"⏳ {seconds} registrando")
+        st.write(f"⏳ ---> registrando")
         time.sleep(1)
     st.write("✔️ registrado!")
     st.session_state['precon']=precon
