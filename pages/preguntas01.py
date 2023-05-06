@@ -28,6 +28,7 @@ lottie_url_processing = 'https://assets8.lottiefiles.com/packages/lf20_tmnc73b6.
 lottie_processing = load_lottieurl(lottie_url_processing)
 
 st_lottie(lottie_processing, key='processing')
+st.image(imagen1)
 #st.write(datper)
 # st.write(len(datrpre))
 #st.write(precon)
