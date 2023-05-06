@@ -4,11 +4,12 @@ from streamlit_extras.switch_page_button import switch_page
 from deta import Deta
 import random
 import time
-
+from PIL import Image
 import requests
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
 
+imagen1 = Image.open('pyaxbeq3.png')
 def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code != 200:
