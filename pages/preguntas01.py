@@ -31,10 +31,10 @@ st_lottie(lottie_processing, key='processing')
 # st.write(len(datrpre))
 #st.write(precon)
 #st.write(datperXdon)
-st.latex('Evaluador: '+datper[0])
-st.latex('Evaluado: '+datper[1])
-st.latex('Relación: '+datper[2])
-st.latex('Parentesco: '+datper[3])
+#st.latex('Evaluador: '+datper[0])
+#st.latex('Evaluado: '+datper[1])
+#st.latex('Relación: '+datper[2])
+#st.latex('Parentesco: '+datper[3])
 if (len(datrpre))>0:
     with st.empty():
         for seconds in range(1):
