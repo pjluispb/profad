@@ -54,7 +54,7 @@ else:
     st.warning('Debe registrar un porcentaje')
     st.stop()
 with st.empty():
-    for seconds in range(2):
+    for seconds in range(1):
         st.write(f"⏳ {seconds} registrando")
         time.sleep(1)
     st.write("✔️ registrado!")
