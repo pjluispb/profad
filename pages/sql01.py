@@ -6,8 +6,10 @@ import streamlit as st
 conn = sqlite3.connect('example.db')
 
 # Create table
-conn.execute('''CREATE TABLE stocks (date text, trans text, symbol text, qty real, price real)''')
-
+try:
+    conn.execute('''CREATE TABLE stocks (date text, trans text, symbol text, qty real, price real)''')
+except:
+    st.write('error creando tabla')
 # Insert a row of data
 conn.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
 
