@@ -4,12 +4,11 @@ from streamlit_extras.switch_page_button import switch_page
 from deta import Deta
 import random
 import time
-from PIL import Image
+
 import requests
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
 
-imagen1 = Image.open('pyaxbeq3.png')
 def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code != 200:
@@ -28,15 +27,14 @@ lottie_url_processing = 'https://assets8.lottiefiles.com/packages/lf20_tmnc73b6.
 lottie_processing = load_lottieurl(lottie_url_processing)
 
 st_lottie(lottie_processing, key='processing')
-st.image(imagen1)
 #st.write(datper)
 # st.write(len(datrpre))
 #st.write(precon)
 #st.write(datperXdon)
-#st.latex('Evaluador: '+datper[0])
+st.latex('Evaluado: '+datper[1]+'   ---   Evaluador: '+datper[0])
 #st.latex('Evaluado: '+datper[1])
-#st.latex('Relación: '+datper[2])
-#st.latex('Parentesco: '+datper[3])
+st.latex('Relación: '+datper[2])
+st.latex('Parentesco: '+datper[3])
 if (len(datrpre))>0:
     with st.empty():
         for seconds in range(1):
@@ -79,5 +77,9 @@ else:
     }
     donesDB = deta.Base('dones')
     donesDB.put(regDones)
-    switch_page('salidapre')
+    st.write('----')
+    #st.stop()
+	#st.stop()
+    #switch_page('salidapre')
+    switch_page('preguntasFin')
 
