@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 from streamlit_extras.switch_page_button import switch_page
+import random
 
 datper = st.session_state['datper']
 datrpre = st.session_state['datrpre']
@@ -23,7 +24,10 @@ for t in datperXdon:
 #st.write('encontrado = ', encontrado)
 # Número 1 = no mucho o nada; Número 2 = un poquito; Número 3 = algo; Número 4 = mucho
 #selecion = st.radio('opciones',[0,'poco','bajo','alto','mucho'], horizontal=True, index=0)
-lineasel = st.slider(label='porcentaje',min_value=0,max_value=100)
+
+# ------>> lineasel = st.slider(label='porcentaje',min_value=0,max_value=100)
+lineasel = random.randint(1,100)
+
 if lineasel==0: selecion='-'
 elif lineasel in range(0,30): selecion='poco'
 elif lineasel in range(30,50): selecion='bajo'
@@ -54,8 +58,8 @@ else:
     st.warning('Debe registrar un porcentaje')
     st.stop()
 with st.empty():
-    for seconds in range(1):
-        st.write(f"⏳ ---> registrando")
+    for seconds in range(2):
+        st.write(f"⏳ {seconds} registrando")
         time.sleep(1)
     st.write("✔️ registrado!")
     st.session_state['precon']=precon
