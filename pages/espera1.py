@@ -13,7 +13,7 @@ dones = st.session_state['dones']
 #st.write(dones)
 col1, col2,col3 = st.columns(3)
 col1.info(datper[1])
-col2.warning('🔀 	   🔀 	    🔀🔀 	   🔀 	    🔀')
+#col2.warning('🔀 	   🔀 	    🔀🔀 	   🔀 	    🔀')
 col3.info(datper[3])
 
 st.subheader(selpre[1])
