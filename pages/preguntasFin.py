@@ -57,13 +57,14 @@ evaluados = dfdones['evaluado'].tolist()
 
 dfbus = dfdones.loc[dfdones['evaluado']==datper[1]]
 #st.write(dfbus)
+st.write(dfdones)
 dfper = dfbus[['evaluado','evaluador','fechayhora','key','parentesco','relacion']]
 dfdones = dfdones.drop(['evaluado','evaluador','fechayhora','key','parentesco','relacion'],axis=1)
 data = dfdones.columns.to_list()
 #st.write(dfper)
 #st.write(data)
 st.write(datperXdon)
-st.write(dfdones)
+
 tval1 = dfdones.loc[0].values.flatten().tolist()
 tval = [tval1,[],[]]
 options01 = {
