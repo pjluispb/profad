@@ -31,10 +31,10 @@ for t in datperXdon:
 #selecion = st.radio('opciones',[0,'poco','bajo','alto','mucho'], horizontal=True, index=0)
 
 # ------>> lineasel = st.slider(label='porcentaje',min_value=0,max_value=100)
-# ------>> vlinea = random.randint(1,100)
-# ------>> lineasel = st.slider(label='porcentaje',min_value=0,max_value=100, value=vlinea)
+vlinea = random.randint(1,100)
+lineasel = st.slider(label='porcentaje',min_value=0,max_value=100, value=vlinea)
 
-lineasel = st.slider(label='porcentaje',min_value=0,max_value=100)
+# lineasel = st.slider(label='porcentaje',min_value=0,max_value=100)
 if lineasel==0: selecion='-'
 elif lineasel in range(0,30): selecion='poco'
 elif lineasel in range(30,50): selecion='bajo'
@@ -59,7 +59,7 @@ if lineasel>0:
         for t in datperXdon:
             if t[0]==don:
                 t[1]+=valor
-
+                st.text(t[0]+' <-> '+t[1])
     #st.write('Debe marcar alguna opción')
 else:
     st.warning('Debe registrar un porcentaje')
