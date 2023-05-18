@@ -38,7 +38,7 @@ st_lottie(lottie_processing, key='processing')
 if (len(datrpre))>0:
     with st.empty():
         for seconds in range(1):
-            #st.write(f"⏳")
+            st.write(f"⏳")
             time.sleep(1)
         st.write("✔️")
         
