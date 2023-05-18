@@ -32,12 +32,15 @@ except:
 
 #st.write(datper)
 
-st.header('Test de Dones')
+st.header('Test de Dones - Autoevaluación')
 col1, col2 = st.columns(2)
 col1.info(datper[1])
 #col2.warning('🔀 	   🔀 	    🔀🔀 	   🔀 	    🔀')
 col2.info(datper[3])
-st_lottie(lottie_processing, key='processing')
+try:
+    st_lottie(lottie_processing, key='processing')
+except:
+    st.write(' ⏳ ')
 if (len(datrpre))>0:
     with st.empty():
         for seconds in range(1):
