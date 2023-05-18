@@ -30,7 +30,8 @@ for t in datperXdon:
 #selecion = st.radio('opciones',[0,'poco','bajo','alto','mucho'], horizontal=True, index=0)
 
 # ------>> lineasel = st.slider(label='porcentaje',min_value=0,max_value=100)
-lineasel = random.randint(1,100)
+vlinea = random.randint(1,100)
+lineasel = st.slider(label='porcentaje',min_value=0,max_value=100, value=vlinea)
 
 if lineasel==0: selecion='-'
 elif lineasel in range(0,30): selecion='poco'
