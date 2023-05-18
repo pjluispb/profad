@@ -11,6 +11,7 @@ datperXdon = st.session_state['datperXdon']
 dones = st.session_state['dones']
 
 #st.write(dones)
+st.header('Test de Dones')
 col1, col2 = st.columns(2)
 col1.info(datper[1])
 #col2.warning('🔀 	   🔀 	    🔀🔀 	   🔀 	    🔀')
