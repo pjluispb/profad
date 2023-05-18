@@ -63,9 +63,9 @@ else:
     st.stop()
 with st.empty():
     for seconds in range(2):
-        st.write(f"⏳ {seconds} registrando")
+        st.write(f"⏳")
         time.sleep(1)
-    st.write("✔️ registrado!")
+    st.write("✔️")
     st.session_state['precon']=precon
     st.session_state['dartpre']=datrpre
 
