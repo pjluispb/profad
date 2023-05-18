@@ -30,7 +30,10 @@ datperXdon = st.session_state['datperXdon']
 dones = st.session_state['dones']
 
 lottie_url_processing = 'https://assets8.lottiefiles.com/packages/lf20_tmnc73b6.json'
-lottie_processing = load_lottieurl(lottie_url_processing)
+try:
+    lottie_processing = load_lottieurl(lottie_url_processing)
+except:
+    st.write('---')
 
 #st_lottie(lottie_processing, key='processing')
 #st.write(datper)
@@ -40,7 +43,7 @@ lottie_processing = load_lottieurl(lottie_url_processing)
 #st.latex('Evaluado: '+datper[1]+' <---> Evaluador: '+datper[0])
 #st.latex('Relación: '+datper[2]+' <---> Parentesco: '+datper[3])
 #st.latex()
-st.header('Test de Dones')
+st.header('Test de Dones - Autoevaluación')
 col1, col2 = st.columns(2)
 col1.info(datper[1])
 col2.info(datper[3])
