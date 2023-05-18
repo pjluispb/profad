@@ -24,7 +24,10 @@ datperXdon = st.session_state['datperXdon']
 dones = st.session_state['dones']
 
 lottie_url_processing = 'https://assets8.lottiefiles.com/packages/lf20_tmnc73b6.json'
-lottie_processing = load_lottieurl(lottie_url_processing)
+try:
+	lottie_processing = load_lottieurl(lottie_url_processing)
+except:
+	st.write('---')
 
 
 #st.write(datper)
