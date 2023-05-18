@@ -22,7 +22,7 @@ dft = df.T
 regdft = dft.to_dict('list')
 
 with st.form('Datos Personales'):
-    st.header('Test de Dones')
+    st.header('Test de Dones - Autoevaluación')
     evaluador = st.text_input('Introduce tu nombre completo')
     iglesia = st.text_input('Iglesia/Ministerio')
     rol = st.text_input('Rol/cargo/ministerio en la congregación')
