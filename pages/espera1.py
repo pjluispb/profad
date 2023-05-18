@@ -59,7 +59,7 @@ if lineasel>0:
         for t in datperXdon:
             if t[0]==don:
                 t[1]+=valor
-                st.text(t[0]+' <-> '+t[1])
+                st.text(t[0]+' <-> '+str(t[1]))
     #st.write('Debe marcar alguna opción')
 else:
     st.warning('Debe registrar un porcentaje')
