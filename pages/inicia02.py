@@ -23,7 +23,9 @@ regdft = dft.to_dict('list')
 
 with st.form('Datos Personales'):
     st.header('Test de Dones')
-    evaluador = st.text_input('Introduce tu nombre')
+    evaluador = st.text_input('Introduce tu nombre completo')
+    iglesia = st.text_input('Iglesia/Ministerio')
+    rol = st.text_input('Rol/cargo/ministerio en la congregación')
     cedula = st.text_input('Introduce tu # cédula')
     aquien = evaluador
     relacion = 'Auto' 
