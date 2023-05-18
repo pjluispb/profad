@@ -38,4 +38,4 @@ with st.form('Datos Personales'):
 
     btn = st.form_submit_button('iniciar test')
     if btn:
-        switch_page('preguntas01')
+        switch_page('preguntas02')
