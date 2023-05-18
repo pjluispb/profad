@@ -59,11 +59,12 @@ dfbus = dfdones.loc[dfdones['evaluado']==datper[1]]
 st.write(dfbus)
 #st.write(dfdones)
 dfper = dfbus[['evaluado','evaluador','fechayhora','key','parentesco','relacion']]
-dfdones = dfdones.drop(['evaluado','evaluador','fechayhora','key','parentesco','relacion'],axis=1)
+#dfdones = dfdones.drop(['evaluado','evaluador','fechayhora','key','parentesco','relacion'],axis=1)
+dfbus = dfbus.drop(['evaluado','evaluador','fechayhora','key','parentesco','relacion'],axis=1)
 data = dfdones.columns.to_list()
 #st.write(dfper)
 #st.write(data)
-st.write(dfdones)
+#st.write(dfdones)
 
 tval1 = dfbus.loc[0].values.flatten().tolist()
 tval = [tval1,[],[]]
