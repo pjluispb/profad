@@ -22,6 +22,7 @@ dft = df.T
 regdft = dft.to_dict('list')
 
 with st.form('Datos Personales'):
+    st.header('Test de Dones')
     evaluador = st.text_input('Introduce tu nombre')
     cedula = st.text_input('Introduce tu # cédula')
     aquien = evaluador
