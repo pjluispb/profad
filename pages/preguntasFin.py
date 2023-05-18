@@ -63,7 +63,7 @@ data = dfdones.columns.to_list()
 #st.write(dfper)
 #st.write(data)
 st.write(datperXdon)
-st.write(evaluados)
+st.write(dfdones)
 tval1 = dfdones.loc[0].values.flatten().tolist()
 tval = [tval1,[],[]]
 options01 = {
