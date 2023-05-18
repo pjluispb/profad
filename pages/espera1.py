@@ -11,7 +11,7 @@ datperXdon = st.session_state['datperXdon']
 dones = st.session_state['dones']
 
 #st.write(dones)
-st.header('Test de Dones')
+st.header('Test de Dones - Autoevaluación')
 col1, col2 = st.columns(2)
 col1.info(datper[1])
 #col2.warning('🔀 	   🔀 	    🔀🔀 	   🔀 	    🔀')
@@ -31,9 +31,10 @@ for t in datperXdon:
 #selecion = st.radio('opciones',[0,'poco','bajo','alto','mucho'], horizontal=True, index=0)
 
 # ------>> lineasel = st.slider(label='porcentaje',min_value=0,max_value=100)
-vlinea = random.randint(1,100)
-lineasel = st.slider(label='porcentaje',min_value=0,max_value=100, value=vlinea)
+# ------>> vlinea = random.randint(1,100)
+# ------>> lineasel = st.slider(label='porcentaje',min_value=0,max_value=100, value=vlinea)
 
+lineasel = st.slider(label='porcentaje',min_value=0,max_value=100)
 if lineasel==0: selecion='-'
 elif lineasel in range(0,30): selecion='poco'
 elif lineasel in range(30,50): selecion='bajo'
