@@ -56,7 +56,7 @@ evaluados = dfdones['evaluado'].tolist()
 #st.write('----')
 
 dfbus = dfdones.loc[dfdones['evaluado']==datper[1]]
-#st.write(dfbus)
+st.write(dfbus)
 st.write(dfdones)
 dfper = dfbus[['evaluado','evaluador','fechayhora','key','parentesco','relacion']]
 dfdones = dfdones.drop(['evaluado','evaluador','fechayhora','key','parentesco','relacion'],axis=1)
