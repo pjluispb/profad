@@ -28,14 +28,7 @@ lottie_processing = load_lottieurl(lottie_url_processing)
 
 
 #st.write(datper)
-# st.write(len(datrpre))
-#st.write(precon)
-#st.write(datperXdon)
-#st.latex('Evaluado: '+datper[1]+'   ---   Evaluador: '+datper[0])
-#st.latex('Evaluado: '+datper[1])
-#st.latex('Relación: '+datper[2])
-#st.latex('Parentesco: '+datper[3])
-#st.info(datper[1]+ '  	🔀 	🔀 	🔀  '+datper[3])
+
 st.header('Test de Dones')
 col1, col2 = st.columns(2)
 col1.info(datper[1])
@@ -45,7 +38,7 @@ st_lottie(lottie_processing, key='processing')
 if (len(datrpre))>0:
     with st.empty():
         for seconds in range(1):
-            st.write(f"⏳")
+            #st.write(f"⏳")
             time.sleep(1)
         st.write("✔️")
         
