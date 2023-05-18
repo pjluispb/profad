@@ -66,7 +66,8 @@ data = dfdones.columns.to_list()
 #st.write(data)
 #st.write(dfdones)
 st.write(dfbus)
-tval1 = dfbus.loc[0].values.flatten().tolist()
+#tval1 = dfbus.loc[0].values.flatten().tolist()
+tval1 = dfbus.values.flatten().tolist()
 tval = [tval1,[],[]]
 options01 = {
     "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}},
