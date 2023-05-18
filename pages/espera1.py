@@ -11,6 +11,10 @@ datperXdon = st.session_state['datperXdon']
 dones = st.session_state['dones']
 
 #st.write(dones)
+col1, col2,col3 = st.columns(3)
+col1.info(datper[1])
+col2.warning('🔀 	   🔀 	    🔀🔀 	   🔀 	    🔀')
+col3.info(datper[3])
 
 st.subheader(selpre[1])
 don = selpre[0]
@@ -65,4 +69,4 @@ with st.empty():
     st.session_state['precon']=precon
     st.session_state['dartpre']=datrpre
 
-switch_page('preguntas01')
+switch_page('preguntas02')
