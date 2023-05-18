@@ -50,7 +50,7 @@ donesDBf = donesDB.fetch()
 dfdones = pd.DataFrame(donesDBf.items)
 evaluados = dfdones['evaluado'].tolist()
 
-st.write('----')
+#st.write('----')
 
 dfbus = dfdones.loc[dfdones['evaluado']==datper[1]]
 #st.write(dfbus)
