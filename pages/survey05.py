@@ -36,7 +36,7 @@ with ph.survey.pages(5, on_submit=cierre) as page:
     st.header(preguntas[page.current][0])
     #card(image=imagenes[page.current], text = '-*-', title=preguntas[page.current][0])
     #card(text = '-*-', title=preguntas[page.current][0])
-    ph.survey.slider(id = 'id'+str(page.current+2), label = preguntas[page.current][1])
+    ph.survey.slider(id = 'id'+str(page.current+2), label = preguntas[page.current][1], label_visibility='hidden')
    
     #ph.survey.text_input(preguntas[page.current][1])
 
