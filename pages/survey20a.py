@@ -10,6 +10,13 @@ import pygsheets
 
 from streamlit_extras.switch_page_button import switch_page
 
+st.set_page_config(
+    page_title="Mentoria ASIGLEH App",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
+
 deta = Deta(st.secrets["deta_key"])
 SCOPES = ('https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive')
 service_account_info = st.secrets.gcp_service_account
