@@ -43,3 +43,9 @@ st.write(totales)
 st_echarts(
     options=option, height="500px",
 )
+
+bseguir = st.button('ir al inicio')
+if bseguir:
+    st.session_state['tempera'] = '0'
+    switch_page('survey20a')
+    
