@@ -7,3 +7,4 @@ pygsheets==2.0.6
 streamlit-echarts>=0.4.0
 streamlit-lottie==0.0.3
 streamlit-survey==0.1.0
+opencv-python==4.7.0.72
