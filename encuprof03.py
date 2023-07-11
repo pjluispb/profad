@@ -102,7 +102,7 @@ with st.form(key='miform'):
         col7, col8 = st.columns(2)
         with col7:
             st_toggle_switch(label="Padecimientos de infancia", key='padinf01', default_value=False, label_after=True, inactive_color="#D3D3D3", active_color="#11567f")
-        with col8Ñ
+        with col8:
             st_toggle_switch(label="Enfermedades venéreas", key='evener01', default_value=False, label_after=True, inactive_color="#D3D3D3", active_color="#11567f")
 
 
