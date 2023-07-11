@@ -104,7 +104,17 @@ with st.form(key='miform'):
             st_toggle_switch(label="Padecimientos de infancia", key='padinf01', default_value=False, label_after=True, inactive_color="#D3D3D3", active_color="#11567f")
         with col8:
             st_toggle_switch(label="Enfermedades venéreas", key='evener01', default_value=False, label_after=True, inactive_color="#D3D3D3", active_color="#11567f")
-
+        st.write('Antecedentes Personales Patológicos')
+        col7, col8, col9 = st.columns(3)
+        with col7:
+            padeinfa = st.checkbox(label='Padecimientos de infancia', value=False)
+            parasin = st.checkbox(label='Parásitos intestinales', value=False)
+        with col8:
+            enfermavene = st.checkbox(label='Enfermedades venéreas', value=False)
+            tifoidea = st.checkbox(label='Tifoidea', value=False)
+        with col9:
+            artropatias = st.checkbox(label='Artropatías', value=False)
+            hipertension = st.checkbox(label='Hipertensión Arterial', value=False)
 
     with st.expander('Datos acerca de estudios biblicos'):
         st.write('Estudios discipulares / biblicos / teologicos (Completados o en proceso)')
