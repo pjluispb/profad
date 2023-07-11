@@ -99,10 +99,7 @@ with st.form(key='miform'):
         fec_bautismo_agua = st.date_input('Fecha de Bautismo en agua', min_value=datetime.date(1940,1,1))
         fec_bautismo_Espiritu = st.date_input('Fecha de Bautismo en el Espiritu Santo', min_value=datetime.date(1940,1,1))
         testimonio = st.text_area('compartenos tu breve testimonio', '''  ''')
-        padeInfancia = st_toggleswitch("Padecimientos de Infancia")
-        # if padeInfancia:
-        #    st.write("padeInfancia")
-        # enfermedadVenerea = st_toggleswitch("Enfermedades venéreas")
+        st_toggle_switch(label="Padecimientos de infancia", key='padinf01', default_value=False, label_after=True, inactive_color="#D3D3D3", active_color="#11567f")
 
 
 
