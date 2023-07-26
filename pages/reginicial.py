@@ -34,23 +34,21 @@ if vercodinv_out=='123':
     with st.form('fregini'):
         nombreu = st.text_input('Ingrese un nombre de usuario')
         cedulau = st.text_input('Ingrese su número de cédula')
+        pastorOlider = st.radio(label='Se registra como Pastor ó como Líder en su congregación ó iglesia?', options=['Pastor', 'Líder'])
         streg, nom, ced = True, nombreu, cedulau
         ingresaReg = st.form_submit_button('Enviar')
         if ingresaReg:
             verifregDB = encprof.fetch({"nombreu":nombreu, "cedulau":cedulau})
             if verifregDB.count==0:
-                encprof.put({"nombreu":nombreu, "cedulau":cedulau, "key":'apta-'+cedulau+'-'+nombreu})
+                encprof.put({"nombreu":nombreu, "cedulau":cedulau, "key":'apta-'+cedulau+'-'+nombreu, "rol":pastorOlider})
                 progress_text = "Registrando datos en DB."
                 my_bar = st.progress(0, text=progress_text)
                 for percent_complete in range(100):
                     time.sleep(0.01)
                     my_bar.progress(percent_complete + 1, text=progress_text)
-                switch_page('reginiapta03')
+                switch_page('login01')
             else:
                 st.error('''
                          Datos ya registrados. 
-
                          NO es posible registrar otro similar.
-
                          Intente de nuevo''')
-

@@ -39,7 +39,15 @@ with col2:
                 st.write(verifregDB.count)
                 st.write(verifregDB.items)
                 #switch_page('encuprof08')
-                switch_page('encupast01')
+                #switch_page('encupast01')
+
+                if verifregDB.items[0]['rol']=='Pastor':
+                    #switch_page('encupast02')
+                    switch_page('encupast01')
+                    #switch_page('encupast02edit')
+                else:
+                    switch_page('encuprof08')
+
             else:
                 st.error('''
                          Error en los datos ingresados.
