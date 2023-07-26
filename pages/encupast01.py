@@ -459,11 +459,11 @@ with st.expander('Datos acerca de su salud'):
     # switch_page('salidas')
     
     
-volver = st.button('Guardar y salir')
+volver = st.button('Salir')
 if volver:
     #st.experimental_rerun()
-    update_reg_datper(nombre,tlf1,celular,email)
-    update_reg_datigle(iglesia,DireccionIglesia)
-    update_reg_datacade(marca_de_estudios, estudio1,certifi1,estudio2,certifi2,estudio3,certifi3)
+    #update_reg_datper(nombre,tlf1,celular,email)
+    #update_reg_datigle(iglesia,DireccionIglesia)
+    #update_reg_datacade(marca_de_estudios, estudio1,certifi1,estudio2,certifi2,estudio3,certifi3)
     
-    # switch_page('salidas')
+    switch_page('login01')
