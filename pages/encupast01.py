@@ -25,7 +25,7 @@ encprof = deta.Base('liderapta')
 # clave = 'apta-'+st.session_state['cedulau']+'-'+st.session_state['nombreu']
 clave = 'apta-'+st.session_state['cedulau']+'-'+st.session_state['nombreu']
 registro = encprof.get(clave)
-registro
+#registro
 
 camposreg = ["nombreu", "cedulau", "Nombres", "Apellidos", "Telefono", "Celular", "email", "Whatsapp", "Facebook", "Instagram", "Twitter", "Direccion", "Edo_Civil", "Edad", "Iglesia", "DireccionIglesia", "Pastor",	"nivestudios","estudio1","certifi1","estudio2","certifi2","estudio3","certifi3","estudio4","certifi4","estudio5","certifi5","otrosEstudiosAcademicos", "cargoIgle", "min_damas", "min_caba", "min_diaco", "min_jov", "min_ados", "min_ninos", "min_aa", "min_fami", "min_misio", "min_celu", "min_ense", "min_prof", "otrosMin",  "cargo_tra_1", "empresa_1",  "cargo_tra_2", "empresa_2",  "cargo_tra_3", "empresa_3",  "cargo_tra_4", "empresa_4",  "cargo_tra_5", "empresa_5",  "otrosc", "fec_conversion", "fec_bautismo_agua", "fec_bautismo_Espiritu", "testimonio", "llamado", "estudiob1", "nivCertBib1", "estudiob2", "nivCertBib2", "estudiob3", "nivCertBib3", "estudiob4", "nivCertBib4", "otrosEstudiosBiblicos", "categomin", "minist_1", "orgigle_1", "tiempominist_1", "descripmin_1", "minist_2", "orgigle_2", "tiempominist_2", "descripmin_2", "minist_3", "orgigle_3", "tiempominist_3", "descripmin_3", "minist_4", "orgigle_4", "tiempominist_4", "descripmin_4", "minist_5", "orgigle_5", "tiempominist_5", "descripmin_5", "otrostrabmin", "tabaq", "cigarrosSlide", "exfumador", "fumadorPasivo", "consumoExposicion", "alcohol", "cantidadXsem", "tiempoDeConsumo", "exalcoholico", "AlcoholicOcasional", "alergias", "queAlergias", "tipoSangre", "farmacodependencia",  "farmacoTiempo", "observaciones", "enfermedadesInfancia", "secuelas", "padeinfa", "parasin", "neurologico", "fiebrereuma", "tuberculosis", "diabemelitus", "fiebreuptiva", "parodiepi", "enfermavene",  "tifoidea", "mentales", "inmunalergi", "vasculares",  "malforcon", "diarreas", "difteria", "artropatias",  "hipertension", "exporadia", "paludismo", "sifilisov", "meningitis",  "polio", "otrospad", "traumaciru", "Inmualertrans"]
 
@@ -67,48 +67,48 @@ except:
 
 #if valores['minist_1']=='': valores['minist_1']='ninguna'
 
-st.write( 'valores = ', valores)
+#st.write( 'valores = ', valores)
 
 
 def update_reg_datper(nombre, apellido, tlf1, celular, email, Whatsapp, faceb, instg, twitter, direccion, Edo_Civil, edad):
-    st.write('update reg-datper')
-    st.write(nombre, apellido, tlf1, celular, email, Whatsapp, faceb, instg, twitter, direccion, Edo_Civil, edad)
+    #st.write('update reg-datper')
+    #st.write(nombre, apellido, tlf1, celular, email, Whatsapp, faceb, instg, twitter, direccion, Edo_Civil, edad)
     encprof.update({'Nombres': nombre, 'Apellidos': apellido, 'Telefono': tlf1, 'Celular': celular, 'email': email, 'nombreu': st.session_state['nombreu'], 'cedulau': st.session_state['cedulau'], 'Whatsapp': Whatsapp, 'Facebook': faceb, 'Instagram': instg, 'Twitter': twitter, 'Direccion': direccion, 'Edo_Civil': Edo_Civil,'Edad': edad}, clave)
     
 def update_reg_datigle(iglesia,Pastor,DireccionIglesia):
-    st.write('update reg-datigle')
-    st.write(iglesia, Pastor, DireccionIglesia)
+    #st.write('update reg-datigle')
+    #st.write(iglesia, Pastor, DireccionIglesia)
     encprof.update({'Iglesia': iglesia, 'Pastor': Pastor, 'DireccionIglesia': DireccionIglesia, 'nombreu': st.session_state['nombreu'], 'cedulau': st.session_state['cedulau']}, clave)
 
 def update_reg_datacade(marca_de_estudios, estudio1, certifi1, estudio2,certifi2, estudio3, certifi3, estudio4, certifi4, estudio5,certifi5, otrosEstudiosAcademicos):
-    st.write('update reg-datacade')
-    st.write(marca_de_estudios, estudio1, certifi1, estudio2, certifi2,estudio3, certifi3, estudio4, certifi4, estudio5,certifi5, otrosEstudiosAcademicos)
+    #st.write('update reg-datacade')
+    #st.write(marca_de_estudios, estudio1, certifi1, estudio2, certifi2,estudio3, certifi3, estudio4, certifi4, estudio5,certifi5, otrosEstudiosAcademicos)
     encprof.update({'nivestudios':marca_de_estudios, 'estudio1':estudio1, 'certifi1':certifi1, 'estudio2':estudio2, 'certifi2':certifi2, 'estudio3':estudio3, 'certifi3':certifi3, 'estudio4':estudio4, 'certifi4':certifi4, 'estudio5':estudio5, 'certifi5':certifi5, 'otrosEstudiosAcademicos':otrosEstudiosAcademicos, 'nombreu':st.session_state['nombreu'], 'cedulau':st.session_state['cedulau']}, clave)
 
 def update_reg_datpartmi(min_damas, min_caba, min_diaco, min_jov, min_ados, min_ninos, min_aa, min_fami, min_misio, min_celu, min_ense, min_prof, otrosMin):
-    st.write('update reg_datpartmi')
-    st.write(min_damas, min_caba, min_diaco, min_jov, min_ados, min_ninos, min_aa, min_fami, min_misio, min_celu, min_ense, min_prof, otrosMin)
+    #st.write('update reg_datpartmi')
+    #st.write(min_damas, min_caba, min_diaco, min_jov, min_ados, min_ninos, min_aa, min_fami, min_misio, min_celu, min_ense, min_prof, otrosMin)
     encprof.update({"min_damas":min_damas, "min_caba":min_caba, "min_diaco":min_diaco, "min_jov":min_jov, "min_ados":min_ados, "min_ninos":min_ninos, "min_aa":min_aa, "min_fami":min_fami, "min_misio":min_misio, "min_celu":min_celu, "min_ense":min_ense, "min_prof":min_prof, "otrosMin":otrosMin, 'nombreu':st.session_state['nombreu'], 'cedulau':st.session_state['cedulau']}, clave)
 
 def update_reg_dattestimonio(fec_conversion, fec_bautismo_agua, fec_bautismo_Espiritu, testimonio, llamado):
-    st.write('update_reg_dattestimonio')
-    st.write(fec_conversion, fec_bautismo_agua, fec_bautismo_Espiritu, testimonio, llamado)
+    #st.write('update_reg_dattestimonio')
+    #st.write(fec_conversion, fec_bautismo_agua, fec_bautismo_Espiritu, testimonio, llamado)
     encprof.update({'fec_conversion':fec_conversion.strftime("%d/%m/%Y"), 'fec_bautismo_agua':fec_bautismo_agua.strftime("%d/%m/%Y"), 'fec_bautismo_Espiritu':fec_bautismo_Espiritu.strftime("%d/%m/%Y"), 'testimonio':testimonio, 'llamado':llamado, 'nombreu':st.session_state['nombreu'], 'cedulau':st.session_state['cedulau']}, clave)
 
 
 def update_reg_dattestbib(estudiob1, nivCertBib1, estudiob2, nivCertBib2, estudiob3, nivCertBib3, estudiob4, nivCertBib4, otrosEstudiosBiblicos):
-    st.write('update_reg_dattestbib')
-    st.write(estudiob1, nivCertBib1, estudiob2, nivCertBib2, estudiob3, nivCertBib3, estudiob4, nivCertBib4, otrosEstudiosBiblicos)
+    #st.write('update_reg_dattestbib')
+    #st.write(estudiob1, nivCertBib1, estudiob2, nivCertBib2, estudiob3, nivCertBib3, estudiob4, nivCertBib4, otrosEstudiosBiblicos)
     encprof.update({'estudiob1':estudiob1, 'nivCertBib1':nivCertBib1, 'estudiob2':estudiob2, 'nivCertBib2':nivCertBib2, 'estudiob3':estudiob3, 'nivCertBib3':nivCertBib3, 'estudiob4':estudiob4, 'nivCertBib4':nivCertBib4, 'otrosEstudiosBiblicos':otrosEstudiosBiblicos, 'nombreu':st.session_state['nombreu'], 'cedulau':st.session_state['cedulau']}, clave)
 
 def update_reg_dattrabmini(categomin, minist_1, orgigle_1, tiempominist_1, descripmin_1, minist_2, orgigle_2, tiempominist_2, descripmin_2, minist_3, orgigle_3, tiempominist_3, descripmin_3, minist_4, orgigle_4, tiempominist_4, descripmin_4, minist_5, orgigle_5, tiempominist_5, descripmin_5, otrostrabmin):
-    st.write('update_reg_dattrabmini')
-    st.write(categomin, minist_1, orgigle_1, tiempominist_1, descripmin_1, minist_2, orgigle_2, tiempominist_2, descripmin_2, minist_3, orgigle_3, tiempominist_3, descripmin_3, minist_4, orgigle_4, tiempominist_4, descripmin_4, minist_5, orgigle_5, tiempominist_5, descripmin_5, otrostrabmin)
+    #st.write('update_reg_dattrabmini')
+    #st.write(categomin, minist_1, orgigle_1, tiempominist_1, descripmin_1, minist_2, orgigle_2, tiempominist_2, descripmin_2, minist_3, orgigle_3, tiempominist_3, descripmin_3, minist_4, orgigle_4, tiempominist_4, descripmin_4, minist_5, orgigle_5, tiempominist_5, descripmin_5, otrostrabmin)
     encprof.update({'categomin':categomin, 'minist_1':minist_1, 'orgigle_1':orgigle_1, 'tiempominist_1':tiempominist_1, 'descripmin_1':descripmin_1, 'minist_2':minist_2, 'orgigle_2':orgigle_2, 'tiempominist_2':tiempominist_2, 'descripmin_2':descripmin_2, 'minist_3':minist_3, 'orgigle_3':orgigle_3, 'tiempominist_3':tiempominist_3, 'descripmin_3':descripmin_3, 'minist_4':minist_4, 'orgigle_4':orgigle_4, 'tiempominist_4':tiempominist_4, 'descripmin_4':descripmin_4, 'minist_5':minist_5, 'orgigle_5':orgigle_5, 'tiempominist_5':tiempominist_5, 'descripmin_5':descripmin_5, 'otrostrabmin':otrostrabmin, 'nombreu':st.session_state['nombreu'], 'cedulau':st.session_state['cedulau']}, clave)
 
 def update_reg_datsalud(tabaq, cigarrosSlide, exfumador, fumadorPasivo, consumoExposicion, alcohol, cantidadXsem, tiempoDeConsumo, exalcoholico, AlcoholicOcasional, alergias, queAlergias, tipoSangre, farmacodependencia,  farmacoTiempo, observaciones, enfermedadesInfancia, secuelas, padeinfa, parasin, neurologico, fiebrereuma, tuberculosis, diabemelitus, fiebreuptiva, parodiepi, enfermavene,  tifoidea, mentales, inmunalergi, vasculares,  malforcon, diarreas, difteria, artropatias,  hipertension, exporadia, paludismo, sifilisov, meningitis,  polio, otrospad, traumaciru, Inmualertrans):
-    st.write('update_reg_datsalud')
-    st.write(tabaq, cigarrosSlide, exfumador, fumadorPasivo, consumoExposicion, alcohol, cantidadXsem, tiempoDeConsumo, exalcoholico, AlcoholicOcasional, alergias, queAlergias, tipoSangre, farmacodependencia,  farmacoTiempo, observaciones, enfermedadesInfancia, secuelas, padeinfa, parasin, neurologico, fiebrereuma, tuberculosis, diabemelitus, fiebreuptiva, parodiepi, enfermavene,  tifoidea, mentales, inmunalergi, vasculares,  malforcon, diarreas, difteria, artropatias,  hipertension, exporadia, paludismo, sifilisov, meningitis,  polio, otrospad, traumaciru, Inmualertrans)
+    #st.write('update_reg_datsalud')
+    #st.write(tabaq, cigarrosSlide, exfumador, fumadorPasivo, consumoExposicion, alcohol, cantidadXsem, tiempoDeConsumo, exalcoholico, AlcoholicOcasional, alergias, queAlergias, tipoSangre, farmacodependencia,  farmacoTiempo, observaciones, enfermedadesInfancia, secuelas, padeinfa, parasin, neurologico, fiebrereuma, tuberculosis, diabemelitus, fiebreuptiva, parodiepi, enfermavene,  tifoidea, mentales, inmunalergi, vasculares,  malforcon, diarreas, difteria, artropatias,  hipertension, exporadia, paludismo, sifilisov, meningitis,  polio, otrospad, traumaciru, Inmualertrans)
 
     encprof.update({'tabaq':tabaq, 'cigarrosSlide':cigarrosSlide, 'exfumador':exfumador, 'fumadorPasivo':fumadorPasivo, 'consumoExposicion':consumoExposicion, 'alcohol':alcohol, 'cantidadXsem':cantidadXsem, 'tiempoDeConsumo':tiempoDeConsumo, 'exalcoholico':exalcoholico, 'AlcoholicOcasional':AlcoholicOcasional, 'alergias':alergias, 'queAlergias':queAlergias, 'tipoSangre':tipoSangre, 'farmacodependencia':farmacodependencia,  'farmacoTiempo':farmacoTiempo, 'observaciones':observaciones, 'enfermedadesInfancia':enfermedadesInfancia, 'secuelas':secuelas, 'padeinfa':padeinfa, 'parasin':parasin, 'neurologico':neurologico, 'fiebrereuma':fiebrereuma, 'tuberculosis':tuberculosis, 'diabemelitus':diabemelitus, 'fiebreuptiva':fiebreuptiva, 'parodiepi':parodiepi, 'enfermavene':enfermavene,  'tifoidea':tifoidea, 'mentales':mentales, 'inmunalergi':inmunalergi, 'vasculares':vasculares,  'malforcon':malforcon, 'diarreas':diarreas, 'difteria':difteria, 'artropatias':artropatias,  'hipertension':hipertension, 'exporadia':exporadia, 'paludismo':paludismo, 'sifilisov':sifilisov, 'meningitis':meningitis,  'polio':polio, 'otrospad':otrospad, 'traumaciru':traumaciru, 'Inmualertrans':Inmualertrans, 'nombreu':st.session_state['nombreu'], 'cedulau':st.session_state['cedulau']}, clave)
 
