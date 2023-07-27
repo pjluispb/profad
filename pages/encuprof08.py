@@ -7,7 +7,7 @@ import datetime
 from streamlit_toggle import st_toggle_switch
 from streamlit_extras.stateful_button import button
 from datetime import datetime
-import datetime
+import time
 
 st.set_page_config(
     page_title="Profesionales AD Reg App",
@@ -68,9 +68,11 @@ except:
 #st.write( 'valores = ', valores)
 
 def update_reg_datper(nombre, apellido, tlf1, celular, email, Whatsapp, faceb, instg, twitter, direccion, Edo_Civil, edad):
-    st.write('update reg-datper')
-    st.write(nombre, apellido, tlf1, celular, email, Whatsapp, faceb, instg, twitter, direccion, Edo_Civil, edad)
+    st.toast('actualizando los datos personales')
+    time.sleep(1)
+    #st.write(nombre, apellido, tlf1, celular, email, Whatsapp, faceb, instg, twitter, direccion, Edo_Civil, edad)
     encprof.update({'Nombres': nombre, 'Apellidos': apellido, 'Telefono': tlf1, 'Celular': celular, 'email': email, 'nombreu': st.session_state['nombreu'], 'cedulau': st.session_state['cedulau'], 'Whatsapp': Whatsapp, 'Facebook': faceb, 'Instagram': instg, 'Twitter': twitter, 'Direccion': direccion, 'Edo_Civil': Edo_Civil,'Edad': edad}, clave)
+    st.toast(icon='🎉')
     
 def update_reg_datigle(iglesia,Pastor,DireccionIglesia):
     st.write('update reg-datigle')
