@@ -26,7 +26,7 @@ encprof = deta.Base('liderapta')
 # st.write('---')
 clave = 'apta-'+st.session_state['cedulau']+'-'+st.session_state['nombreu']
 registro = encprof.get(clave)
-registro
+#registro
 
 camposreg = ["nombreu", "cedulau", "Nombres", "Apellidos", "Telefono", "Celular", "email", "Whatsapp", "Facebook", "Instagram", "Twitter", "Direccion", "Edo_Civil", "Edad", "Iglesia", "DireccionIglesia", "Pastor",	"nivestudios","estudio1","certifi1","estudio2","certifi2","estudio3","certifi3","estudio4","certifi4","estudio5","certifi5","otrosEstudiosAcademicos", "cargoIgle", "min_damas", "min_caba", "min_diaco", "min_jov", "min_ados", "min_ninos", "min_aa", "min_fami", "min_misio", "min_celu", "min_ense", "min_prof", "otrosMin",  "cargo_tra_1", "empresa_1",  "cargo_tra_2", "empresa_2",  "cargo_tra_3", "empresa_3",  "cargo_tra_4", "empresa_4",  "cargo_tra_5", "empresa_5",  "otrosc", "fec_conversion", "fec_bautismo_agua", "fec_bautismo_Espiritu", "testimonio", "estudiob1", "nivCertBib1", "estudiob2", "nivCertBib2", "estudiob3", "nivCertBib3", "estudiob4", "nivCertBib4", "otrosEstudiosBiblicos", "categomin", "minist_1", "orgigle_1", "tiempominist_1", "descripmin_1", "minist_2", "orgigle_2", "tiempominist_2", "descripmin_2", "minist_3", "orgigle_3", "tiempominist_3", "descripmin_3", "minist_4", "orgigle_4", "tiempominist_4", "descripmin_4", "minist_5", "orgigle_5", "tiempominist_5", "descripmin_5", "otrostrabmin", "tabaq", "cigarrosSlide", "exfumador", "fumadorPasivo", "consumoExposicion", "alcohol", "cantidadXsem", "tiempoDeConsumo", "exalcoholico", "AlcoholicOcasional", "alergias", "queAlergias", "tipoSangre", "farmacodependencia",  "farmacoTiempo", "observaciones", "enfermedadesInfancia", "secuelas", "padeinfa", "parasin", "neurologico", "fiebrereuma", "tuberculosis", "diabemelitus", "fiebreuptiva", "parodiepi", "enfermavene",  "tifoidea", "mentales", "inmunalergi", "vasculares",  "malforcon", "diarreas", "difteria", "artropatias",  "hipertension", "exporadia", "paludismo", "sifilisov", "meningitis",  "polio", "otrospad", "traumaciru", "Inmualertrans", "dispuestoXAPTA"]
 
@@ -65,7 +65,7 @@ try:  #normaliza algunos campos para mostrarlos en la app
     if valores['dispuestoXAPTA']=='': valores['dispuestoXAPTA']=False
 except:
     st.write('---')
-st.write( 'valores = ', valores)
+#st.write( 'valores = ', valores)
 
 def update_reg_datper(nombre, apellido, tlf1, celular, email, Whatsapp, faceb, instg, twitter, direccion, Edo_Civil, edad):
     st.write('update reg-datper')
