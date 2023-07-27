@@ -72,6 +72,7 @@ def update_reg_datper(nombre, apellido, tlf1, celular, email, Whatsapp, faceb, i
     time.sleep(1)
     #st.write(nombre, apellido, tlf1, celular, email, Whatsapp, faceb, instg, twitter, direccion, Edo_Civil, edad)
     encprof.update({'Nombres': nombre, 'Apellidos': apellido, 'Telefono': tlf1, 'Celular': celular, 'email': email, 'nombreu': st.session_state['nombreu'], 'cedulau': st.session_state['cedulau'], 'Whatsapp': Whatsapp, 'Facebook': faceb, 'Instagram': instg, 'Twitter': twitter, 'Direccion': direccion, 'Edo_Civil': Edo_Civil,'Edad': edad}, clave)
+    time.sleep(1)
     st.toast(icon='🎉')
     
 def update_reg_datigle(iglesia,Pastor,DireccionIglesia):
