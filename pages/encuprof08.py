@@ -157,9 +157,10 @@ with st.expander('Datos Personales'):
         st.write('---')
         guarda01 = st.form_submit_button('Guardar')
         if guarda01:
-            st.write('---guardando Datos Personales---')
-            st.write(nombre, apellido, tlf1, celular, email, Whatsapp, faceb, instg, twitter, direccion, Edo_Civil, edad)
+            #st.write('---guardando Datos Personales---')
+            #st.write(nombre, apellido, tlf1, celular, email, Whatsapp, faceb, instg, twitter, direccion, Edo_Civil, edad)
             update_reg_datper(nombre, apellido, tlf1, celular, email, Whatsapp, faceb, instg, twitter, direccion, Edo_Civil, edad)
+            st.toast('Los Datos fueron actualizados')
 
 with st.expander('Datos de la iglesia a la que asiste'):
     with st.form(key='datigle'):
