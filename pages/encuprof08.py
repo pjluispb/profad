@@ -250,7 +250,8 @@ with st.expander('Datos acerca del trabajo'):
 
 with st.expander('Datos acerca de su testimonio'):
     with st.form(key='dattesti'):
-        fec_conversion = st.date_input('Fecha de Conversión', min_value=datetime.date(1940,1,1), value=datetime.datetime.strptime(valores['fec_conversion'], "DD/MM/YYYY"), max_value=datetime.datetime.now(), format="DD/MM/YYYY",)
+        #fec_conversion = st.date_input('Fecha de Conversión', min_value=datetime.date(1940,1,1), value=datetime.datetime.strptime(valores['fec_conversion'], "DD/MM/YYYY"), max_value=datetime.datetime.now(), format="DD/MM/YYYY",)
+        fec_conversion = st.date_input('Fecha de Conversión', format = 'DD/MM/YYYY',)
         fec_bautismo_agua = st.date_input('Fecha de Bautismo en agua', min_value=datetime.date(1940,1,1), value=datetime.datetime.strptime(valores['fec_bautismo_agua'], "%d/%m/%Y"), max_value=datetime.datetime.now())
         fec_bautismo_Espiritu = st.date_input('Fecha de Bautismo en el Espiritu Santo', min_value=datetime.date(1940,1,1), value=datetime.datetime.strptime(valores['fec_bautismo_Espiritu'], "%d/%m/%Y"), max_value=datetime.datetime.now())
         testimonio = st.text_area('Compártenos tu testimonio de salvación', value=valores['testimonio'])
